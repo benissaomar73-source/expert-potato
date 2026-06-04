@@ -1,0 +1,583 @@
+/* --- Arrière-plan Global --- */
+body {
+    background: linear-gradient(rgba(226, 232, 240, 0.8), rgba(226, 232, 240, 0.8)), 
+                url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=1920');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Cards */
+.card, 
+.plan-card, 
+.trainer-card,
+.info-box,
+.stat-card,
+.login-box {
+    background: var(--card-bg); /* Gris clair pour les cartes */
+    border-radius: var(--radius-lg);
+    padding: var(--s-5);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    overflow: visible;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+}
+
+.card > .btn, 
+.plan-card > .btn, 
+.trainer-card > .btn {
+    margin-top: auto;
+}
+
+.card:hover, 
+.plan-card:hover, 
+.trainer-card:hover,
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+/* Plan Card Specifics */
+.plan-card {
+    text-align: center;
+    position: relative;
+}
+
+.plan-price {
+    font-size: 3.5rem;
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary);
+    margin: var(--s-2) 0;
+    line-height: 1;
+}
+
+.plan-price span {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.plan-features {
+    margin: var(--s-4) 0;
+    text-align: left;
+}
+
+.plan-features li {
+    padding: var(--s-1) 0;
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.plan-features li::before {
+    content: '✓';
+    color: var(--success);
+    font-weight: bold;
+    margin-right: var(--s-2);
+}
+
+.plan-card.recommended {
+    border: 2px solid var(--accent);
+}
+
+.plan-card.recommended::before {
+    content: "Plus Populaire";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--accent);
+    color: var(--white);
+    padding: 6px 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 4px 10px var(--accent-glow);
+}
+
+/* Trainer Card Specifics */
+.trainer-card {
+    text-align: center;
+}
+
+.trainer-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+.trainer-card figure {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto var(--s-3);
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.trainer-card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trainer-card h3 {
+    margin-bottom: var(--s-1);
+}
+
+.trainer-card .specialty {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: var(--s-2);
+}
+
+.trainer-card .experience {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: var(--s-3);
+}
+
+.trainer-card .modal-profile-text {
+    margin-top: auto;
+    width: 100%;
+    padding-top: var(--s-3);
+    border-top: 1px solid var(--border);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.trainer-card:hover figure {
+    transform: scale(1.05);
+}
+
+.trainer-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border-radius: var(--radius);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 25px var(--accent-glow);
+}
+
+.btn:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 10px var(--accent-glow);
+    transition: transform 0.1s ease;
+}
+
+/* Bouton Gris (Plan Silver) */
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-muted);
+    box-shadow: 0 12px 25px rgba(100, 116, 139, 0.2);
+}
+
+/* Bouton Premium (Plan Gold) */
+.btn-premium {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24, #f59e0b);
+    background-size: 200% 200%;
+    color: #0f172a !important; /* Texte sombre pour contraste sur l'or */
+    border: none;
+    animation: gradientMove 3s ease infinite;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    color: var(--white);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 25px var(--accent-glow);
+}
+
+.btn-outline:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 10px var(--accent-glow);
+    transition: transform 0.1s ease;
+}
+
+.btn-outline-white {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.btn-outline-white:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline-white:active {
+    transform: translateY(-1px) scale(0.98);
+    transition: transform 0.1s ease;
+}
+
+/* Forms */
+fieldset {
+    border: none;
+    padding: var(--s-4);
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    margin-bottom: var(--s-4);
+}
+
+legend {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: var(--s-2);
+    padding: 0;
+    display: block;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: var(--s-3);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: var(--transition);
+    background-color: #fcfcfc;
+    background-color: var(--card-bg); /* Assure la cohérence avec le fond des cartes */
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+    background-color: var(--white);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    cursor: pointer;
+    accent-color: var(--accent);
+}
+
+.form-group label.d-flex {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: var(--transition); /* Garde la transition pour le hover */
+    background: var(--card-bg); /* Utilise le blanc cassé pour les labels */
+}
+
+.form-group label.d-flex:hover {
+    border-color: var(--accent);
+    background-color: #f8faff;
+}
+
+.form-group input[type="radio"]:checked + span,
+.form-group input[type="radio"]:checked {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+label.d-flex {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    line-height: 1.2 !important;
+}
+
+label.d-flex input[type="checkbox"],
+label.d-flex input[type="radio"] {
+    margin: 0 !important;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+/* Tables */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--radius);
+}
+
+/* Description Lists (Plan Details) */
+.plan-details dt {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-top: var(--s-4);
+    margin-bottom: var(--s-1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.plan-details dt:first-child {
+    margin-top: 0;
+}
+
+.plan-details dd {
+    margin-left: 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding-bottom: var(--s-3);
+    border-bottom: 1px dashed var(--border);
+}
+
+.plan-details dd:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: var(--s-2) 0;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.card table td {
+    padding: var(--s-2) 0;
+}
+
+.card table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Success Modal */
+.success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(4px);
+}
+
+.success-modal.active {
+    display: flex;
+}
+
+.success-modal-content {
+    background: var(--card-bg); /* Utilise le blanc cassé pour le modal de succès */
+    padding: var(--s-6);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: var(--shadow-card-hover);
+    animation: modalSlideUp 0.3s ease-out;
+}
+
+@keyframes modalSlideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.success-icon {
+    font-size: 5rem;
+    color: var(--success);
+    margin-bottom: var(--s-3);
+    display: block;
+}
+
+.success-modal h2 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary);
+    margin-bottom: var(--s-2);
+}
+
+.success-modal p {
+    color: var(--text-muted);
+    margin-bottom: var(--s-4);
+}
+
+/* Badges */
+.badge {
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.badge-debutant { background-color: #dcfce7; color: #166534; }
+.badge-intermediaire { background-color: #fef9c3; color: #854d0e; }
+.badge-avance { background-color: #fee2e2; color: #991b1b; }
+
+/* Modal Overlay (Generic) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    backdrop-filter: blur(5px);
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--card-bg); /* Utilise le blanc cassé pour le contenu du modal */
+    padding: var(--s-6);
+    border-radius: var(--radius-lg);
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+#fermer-modal {
+    position: absolute;
+    top: var(--s-3);
+    right: var(--s-3);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    line-height: 1;
+}
+
+#fermer-modal:hover {
+    color: var(--primary);
+}
+
+/* Admin Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--s-4);
+    margin-bottom: var(--s-6);
+}
+
+.stat-card {
+    background: var(--card-bg); /* Utilise le blanc cassé pour les cartes de statistiques */
+    padding: var(--s-5);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    border-left: 4px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Utility for grid-2col inconsistency */
+.grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--s-4);
+}
+
+@media (max-width: 768px) {
+    .grid-2col {
+        grid-template-columns: 1fr;
+    }
+}

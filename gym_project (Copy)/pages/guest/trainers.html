@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit DZ - Coachs</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Power<span>Fit</span> DZ</div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="classes.html">Cours</a>
+                <a href="membership.html">Abonnements</a>
+                <a href="trainers.html" class="active">Coachs</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-header">
+            <div class="container">
+                <h1>Nos Coachs Professionnels</h1>
+                <p>Des experts certifiés pour vous accompagner dans votre parcours sportif</p>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">Notre Équipe</h2>
+
+                <!-- Barre de recherche (filtrée par coachs.js) -->
+                <div class="card mb-4">
+                    <div class="form-group">
+                        <label for="recherche-coach" class="form-label">Rechercher un coach</label>
+                        <input type="text"
+                               id="recherche-coach"
+                               class="form-control"
+                               placeholder="🔍 Rechercher par nom ou spécialité (ex: Boxe, Sarah...)">
+                    </div>
+                </div>
+
+                <!-- Message si aucun résultat (caché par défaut) -->
+                <p id="aucun-coach"
+                   class="d-none text-center text-muted p-4">
+                    Aucun coach trouvé pour cette recherche.
+                </p>
+
+                <!-- Grille des coachs (remplie par coachs.js) -->
+                <div class="grid grid-3" id="grille-coachs">
+                    <!-- Rempli dynamiquement par JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section recrutement -->
+        <section class="bg-primary text-center">
+            <div class="container">
+                <h2 class="section-title text-white">Rejoignez Notre Équipe</h2>
+                <p class="text-muted-light mb-4 max-w-700 m-auto">
+                    Vous êtes un coach certifié passionné par le sport ?
+                    PowerFit DZ recrute des coachs motivés à Constantine pour renforcer son équipe d'experts.
+                </p>
+                <a href="contact.html" class="btn btn-outline-white">Nous Contacter</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== MODAL DÉTAIL COACH ===== -->
+    <div id="modal-coach" class="modal-overlay">
+        <div class="modal-content">
+            <!-- Bouton fermer -->
+            <button id="fermer-modal">×</button>
+            <!-- Contenu rempli par coachs.js -->
+            <div id="contenu-modal"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-col">
+                    <h4>PowerFit DZ</h4>
+                    <p>Votre partenaire sport à Constantine. Transformez votre corps, changez votre vie avec nos installations premium et nos coachs experts.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="classes.html">Cours</a></li>
+                        <li><a href="membership.html">Abonnements</a></li>
+                        <li><a href="trainers.html">Coachs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact & Horaires</h4>
+                    <ul>
+                        <li>📍 Rue Abane Ramdane, Constantine</li>
+                        <li>📞 033 12 34 56</li>
+                        <li>📧 contact@powerfitdz.com</li>
+                        <li>🕐 Lun–Sam : 7h00 – 22h00</li>
+                        <li>🕐 Dim : 9h00 – 17h00</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Réseaux Sociaux</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PowerFit DZ – Constantine, Algérie. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/coachs.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit DZ - Dashboard Admin</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- ===== EN-TÊTE ET NAVIGATION ===== -->
+    <header>
+        <nav>
+            <div class="logo">Power<span>Fit</span> DZ <span class="badge" style="background:var(--danger); color:white; font-size:0.8rem; margin-left:10px; padding: 4px 8px; vertical-align: middle;">ADMIN</span></div>
+            <div class="nav-links">
+                <a href="admin-dashboard.html" class="active">Dashboard</a>
+                <a href="admin-membres.html">Membres</a>
+                <a href="admin-plans.html">Plans</a>
+                <a href="admin-cours.html">Cours</a>
+                <a href="../guest/index.html">Voir le Site</a>
+                <a href="admin-login.html" style="color: var(--danger);">Déconnexion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-light">
+            <div class="container">
+                <h1 class="section-title" style="text-align: left; margin-bottom: var(--s-5);">Dashboard Administrateur</h1>
+                
+                <!-- STATS -->
+                <div class="grid grid-4 mb-4">
+                    <div class="stat-card card">
+                        <span class="stat-number" id="stat-membres">...</span>
+                        <span class="stat-label">Total Membres</span>
+                    </div>
+                    <div class="stat-card card" style="border-top: 4px solid var(--success);">
+                        <span class="stat-number" id="stat-abonnements">...</span>
+                        <span class="stat-label">Abonnements Actifs</span>
+                    </div>
+                    <div class="stat-card card" style="border-top: 4px solid var(--warning);">
+                        <span class="stat-number" id="stat-cours">0</span>
+                        <span class="stat-label">Cours / Semaine</span>
+                    </div>
+                    <div class="stat-card card" style="border-top: 4px solid #8b5cf6;">
+                        <span class="stat-number" id="stat-plan-populaire">...</span>
+                        <span class="stat-label">Plan Populaire</span>
+                    </div>
+                </div>
+
+                <!-- GRAPHIQUE -->
+                <div class="card mb-4">
+                    <h2 class="mb-4">📊 Répartition par Plan</h2>
+                    <div id="graphique-plans"></div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 PowerFit DZ – Interface d'Administration. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/admin-stats.js"></script>
+
+</body>
+</html>

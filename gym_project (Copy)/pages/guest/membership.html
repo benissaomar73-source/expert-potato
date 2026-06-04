@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit DZ - Abonnements</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Power<span>Fit</span> DZ</div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="classes.html">Cours</a>
+                <a href="membership.html" class="active">Abonnements</a>
+                <a href="trainers.html">Coachs</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-header">
+            <div class="container">
+                <h1>Nos Abonnements</h1>
+                <p>Choisissez le plan qui correspond à vos objectifs</p>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">Comparer les Plans</h2>
+                <div class="grid grid-3">
+
+                    <div class="plan-card">
+                        <h3>🥉 Bronze</h3>
+                        <div class="plan-price">1 500 DA <span>/ mois</span></div>
+                        <ul class="plan-features">
+                            <li>Accès salle de musculation</li>
+                            <li>Accès cardio</li>
+                            <li>1 cours collectif / semaine</li>
+                            <li>Vestiaires & douches</li>
+                        </ul>
+                        <button class="btn btn-choisir-plan"
+                                data-nom="🥉 Bronze" data-prix="1 500 DA / mois">
+                            Choisir Bronze
+                        </button>
+                    </div>
+
+                    <div class="plan-card recommended">
+                        <h3>🥈 Silver</h3>
+                        <div class="plan-price">3 500 DA <span>/ trimestre</span></div>
+                        <ul class="plan-features">
+                            <li>Tout le plan Bronze</li>
+                            <li>Cours collectifs illimités</li>
+                            <li>Accès piscine</li>
+                            <li>1 séance coach / mois</li>
+                        </ul>
+                        <button class="btn btn-choisir-plan btn-secondary"
+                                data-nom="🥈 Silver" data-prix="3 500 DA / trimestre">
+                            Choisir Silver
+                        </button>
+                    </div>
+
+                    <div class="plan-card">
+                        <h3>🥇 Gold</h3>
+                        <div class="plan-price">10 000 DA <span>/ an</span></div>
+                        <ul class="plan-features">
+                            <li>Tout le plan Silver</li>
+                            <li>Coaching personnalisé</li>
+                            <li>Accès spa & hammam</li>
+                            <li>Plan nutrition inclus</li>
+                            <li>Suivi mensuel</li>
+                        </ul>
+                        <button class="btn btn-choisir-plan btn-premium"
+                                data-nom="🥇 Gold" data-prix="10 000 DA / an">
+                            Choisir Gold
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light">
+            <div class="container">
+                <h2 class="section-title">Détails des Offres</h2>
+                <div class="card" style="max-width: 800px; margin: 0 auto;">
+                    <dl class="plan-details">
+                        <dt>🥉 Plan Bronze</dt>
+                        <dd>L'offre idéale pour les sportifs indépendants souhaitant accéder aux équipements essentiels de musculation et cardio.</dd>
+                        
+                        <dt>🥈 Plan Silver</dt>
+                        <dd>Notre offre la plus populaire, incluant un accès illimité à tous nos cours collectifs et à la piscine olympique.</dd>
+                        
+                        <dt>🥇 Plan Gold</dt>
+                        <dd>L'expérience premium ultime avec un coaching personnalisé, un suivi nutritionnel complet et un accès à notre espace spa & bien-être.</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section id="inscription" class="bg-light">
+            <div class="container">
+                <div class="card" style="max-width: 800px; margin: 0 auto;">
+                    <h2 class="section-title">Formulaire d'Inscription</h2>
+
+                    <form id="form-inscription" novalidate>
+
+                        <fieldset class="mb-4">
+                            <legend>Informations Personnelles</legend>
+
+                            <div class="grid grid-2">
+                                <div class="form-group">
+                                    <label for="nom" class="form-label">Nom Complet *</label>
+                                    <input type="text" id="nom" name="nom" class="form-control" placeholder="Ex: Ahmed Boudiaf">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="exemple@gmail.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="telephone" class="form-label">Téléphone *</label>
+                                    <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="0555123456">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="dob" class="form-label">Date de Naissance *</label>
+                                    <input type="date" id="dob" name="dob" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="wilaya" class="form-label">Wilaya</label>
+                                <select id="wilaya" name="wilaya" class="form-control">
+                                    <option value="">-- Sélectionner --</option>
+                                    <option value="01">01 - Adrar</option>
+                                    <option value="02">02 - Chlef</option>
+                                    <option value="03">03 - Laghouat</option>
+                                    <option value="04">04 - Oum El Bouaghi</option>
+                                    <option value="05">05 - Batna</option>
+                                    <option value="06">06 - Béjaïa</option>
+                                    <option value="07">07 - Biskra</option>
+                                    <option value="08">08 - Béchar</option>
+                                    <option value="09">09 - Blida</option>
+                                    <option value="10">10 - Bouira</option>
+                                    <option value="11">11 - Tamanrasset</option>
+                                    <option value="12">12 - Tébessa</option>
+                                    <option value="13">13 - Tlemcen</option>
+                                    <option value="14">14 - Tiaret</option>
+                                    <option value="15">15 - Tizi Ouzou</option>
+                                    <option value="16">16 - Alger</option>
+                                    <option value="17">17 - Djelfa</option>
+                                    <option value="18">18 - Jijel</option>
+                                    <option value="19">19 - Sétif</option>
+                                    <option value="20">20 - Saïda</option>
+                                    <option value="21">21 - Skikda</option>
+                                    <option value="22">22 - Sidi Bel Abbès</option>
+                                    <option value="23">23 - Annaba</option>
+                                    <option value="24">24 - Guelma</option>
+                                    <option value="25">25 - Constantine</option>
+                                    <option value="26">26 - Médéa</option>
+                                    <option value="27">27 - Mostaganem</option>
+                                    <option value="28">28 - M'Sila</option>
+                                    <option value="29">29 - Mascara</option>
+                                    <option value="30">30 - Ouargla</option>
+                                    <option value="31">31 - Oran</option>
+                                    <option value="32">32 - El Bayadh</option>
+                                    <option value="33">33 - Illizi</option>
+                                    <option value="34">34 - Bordj Bou Arréridj</option>
+                                    <option value="35">35 - Boumerdès</option>
+                                    <option value="36">36 - El Tarf</option>
+                                    <option value="37">37 - Tindouf</option>
+                                    <option value="38">38 - Tissemsilt</option>
+                                    <option value="39">39 - El Oued</option>
+                                    <option value="40">40 - Khenchela</option>
+                                    <option value="41">41 - Souk Ahras</option>
+                                    <option value="42">42 - Tipaza</option>
+                                    <option value="43">43 - Mila</option>
+                                    <option value="44">44 - Aïn Defla</option>
+                                    <option value="45">45 - Naâma</option>
+                                    <option value="46">46 - Aïn Témouchent</option>
+                                    <option value="47">47 - Ghardaïa</option>
+                                    <option value="48">48 - Relizane</option>
+                                    <option value="49">49 - El M'Ghair</option>
+                                    <option value="50">50 - El Meniaa</option>
+                                    <option value="51">51 - Ouled Djellal</option>
+                                    <option value="52">52 - Bordj Badji Mokhtar</option>
+                                    <option value="53">53 - Béni Abbès</option>
+                                    <option value="54">54 - Timimoun</option>
+                                    <option value="55">55 - Touggourt</option>
+                                    <option value="56">56 - Djanet</option>
+                                    <option value="57">57 - In Salah</option>
+                                    <option value="58">58 - In Guezzam</option>
+                                </select>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="mb-4">
+                            <legend>Choix du Plan *</legend>
+                            <div class="form-group">
+                                <label for="plan-bronze" class="d-flex align-center gap-2 cursor-pointer">
+                                    <input type="radio" id="plan-bronze" name="plan" value="bronze"> 🥉 Bronze – 1 500 DA / mois
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="plan-silver" class="d-flex align-center gap-2 cursor-pointer">
+                                    <input type="radio" id="plan-silver" name="plan" value="silver"> 🥈 Silver – 3 500 DA / trimestre
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="plan-gold" class="d-flex align-center gap-2 cursor-pointer">
+                                    <input type="radio" id="plan-gold" name="plan" value="gold"> 🥇 Gold – 10 000 DA / an
+                                </label>
+                            </div>
+                            <p id="erreur-plan" class="d-none error-msg">
+                                Veuillez choisir un plan.
+                            </p>
+                        </fieldset>
+
+                        <div class="form-group">
+                            <label for="objectif" class="form-label">Objectif (optionnel)</label>
+                            <textarea id="objectif" name="objectif" class="form-control" placeholder="Ex: Perdre du poids, prendre de la masse..."></textarea>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="conditions" class="d-flex align-center gap-2 cursor-pointer">
+                                <input type="checkbox" id="conditions" name="conditions">
+                                J'accepte les <a href="#" class="color-accent">conditions d'utilisation</a> *
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn w-100">
+                            S'inscrire Maintenant
+                        </button>
+
+                    </form>
+
+                    <div class="mt-4 pt-4 border-top text-center">
+                        <p class="text-muted mb-2">Méthodes de paiement acceptées :</p>
+                        <p class="font-weight-600">💵 Espèces &nbsp;&nbsp; 🏦 CCP &nbsp;&nbsp; 💳 Carte Dahabia &nbsp;&nbsp; 📱 Baridimob</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal de Succès (Géré par inscription.js) -->
+    <div id="success-modal" class="success-modal">
+        <div class="success-modal-content">
+            <span class="success-icon">✅</span>
+            <h2>Inscription Réussie !</h2>
+            <p>Bienvenue chez PowerFit DZ ! Nous vous contacterons très bientôt pour finaliser votre adhésion.</p>
+            <button id="btn-close-modal" class="btn">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Mini panier sticky -->
+    <div id="barre-panier">
+        <span>🛒 Plan sélectionné : <strong id="panier-nom-plan"></strong> — <span id="panier-prix"></span></span>
+        <div class="panier-actions">
+            <button id="btn-proceder" class="btn">S'inscrire ↓</button>
+            <button id="btn-vider-panier" class="btn btn-outline-white">✕ Vider</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-col">
+                    <h4>PowerFit DZ</h4>
+                    <p>Votre partenaire sport à Constantine. Transformez votre corps, changez votre vie avec nos installations premium et nos coachs experts.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="classes.html">Cours</a></li>
+                        <li><a href="membership.html">Abonnements</a></li>
+                        <li><a href="trainers.html">Coachs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact & Horaires</h4>
+                    <ul>
+                        <li>📍 Rue Abane Ramdane, Constantine</li>
+                        <li>📞 033 12 34 56</li>
+                        <li>📧 contact@powerfitdz.com</li>
+                        <li>🕐 Lun–Sam : 7h00 – 22h00</li>
+                        <li>🕐 Dim : 9h00 – 17h00</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Réseaux Sociaux</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PowerFit DZ – Constantine, Algérie. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS : panier d'abord, puis validation -->
+    <script src="../../js/panier.js"></script>
+    <script src="../../js/inscription.js"></script>
+
+</body>
+</html>

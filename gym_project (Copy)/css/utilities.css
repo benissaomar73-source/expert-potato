@@ -1,0 +1,19 @@
+.mb-4 { margin-bottom: var(--s-4) !important; }
+.mt-4 { margin-top: var(--s-4) !important; }
+.text-center { text-align: center !important; }
+.w-100 { width: 100% !important; }
+.d-flex { display: flex !important; }
+.flex-column { flex-direction: column !important; }
+.align-center { align-items: center !important; }
+.justify-between { justify-content: space-between !important; }
+.gap-2 { gap: 0.5rem !important; }
+.gap-4 { gap: var(--s-4) !important; }
+.bg-light { background-color: #f1f5f9 !important; }
+.bg-primary { background-color: var(--primary) !important; color: var(--white) !important; }
+.bg-dark { background-color: var(--primary-light) !important; color: var(--white) !important; }
+.color-accent { color: var(--accent) !important; }
+.text-white { color: var(--white) !important; }
+.text-muted-light { color: #cbd5e1 !important; }
+.max-w-700 { max-width: 700px !important; }
+.m-auto { margin-left: auto !important; margin-right: auto !important; }
+.cursor-pointer { cursor: pointer !important; }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit DZ - Gestion des Cours</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <!-- ===== EN-TÊTE ET NAVIGATION ===== -->
+    <header>
+        <nav>
+            <div class="logo">Power<span>Fit</span> DZ <span class="badge" style="background:var(--danger); color:white; font-size:0.8rem; margin-left:10px; padding: 4px 8px; vertical-align: middle;">ADMIN</span></div>
+            <div class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-membres.html">Membres</a>
+                <a href="admin-plans.html">Plans</a>
+                <a href="admin-cours.html" class="active">Cours</a>
+                <a href="../guest/index.html">Voir le Site</a>
+                <a href="admin-login.html" style="color: var(--danger);">Déconnexion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-light">
+            <div class="container">
+                <div class="d-flex justify-between align-center mb-4">
+                    <h1 class="section-title" style="text-align: left; margin: 0;">Gestion des Cours</h1>
+                    <button class="btn" id="btn-ouvrir-ajout-cours" style="font-size: 0.9rem; padding: 0.6rem 1.2rem;">+ Ajouter un Cours</button>
+                </div>
+
+                <div class="card mb-4">
+                    <h2 class="mb-4">Cours Enregistrés</h2>
+                    <div id="grid-cours-admin" class="grid grid-3">
+                        <!-- Rempli par admin-cours.js -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL POUR AJOUTER UN COURS -->
+    <div id="modal-ajouter-cours" class="modal-overlay">
+        <div class="modal-content" style="max-width: 600px;">
+            <button id="fermer-modal-ajout-cours" class="btn-close-modal" style="position:absolute; top:15px; right:20px; background:none; border:none; font-size:24px; cursor:pointer; color:var(--text-muted);">&times;</button>
+            <h2 class="mb-4">Ajouter un Nouveau Cours</h2>
+            <form id="form-ajouter-cours">
+                <div class="grid grid-2">
+                    <div class="form-group"><label for="cours-nom" class="form-label">Nom du Cours *</label><input type="text" id="cours-nom" class="form-control" placeholder="Ex: Pilates" required></div>
+                    <div class="form-group"><label for="cours-coach" class="form-label">Coach *</label><select id="cours-coach" class="form-control" required><option value="">-- Choisir --</option><option value="Sarah Benmoussa">Sarah Benmoussa</option><option value="Karim Hadjadj">Karim Hadjadj</option><option value="Yacine Djellouli">Yacine Djellouli</option><option value="Amira Tebbal">Amira Tebbal</option><option value="Sofiane Bouzid">Sofiane Bouzid</option><option value="Lyna Mansouri">Lyna Mansouri</option></select></div>
+                    <div class="form-group"><label for="cours-jour" class="form-label">Jour *</label><select id="cours-jour" class="form-control" required><option value="">-- Choisir --</option><option value="Lundi">Lundi</option><option value="Mardi">Mardi</option><option value="Mercredi">Mercredi</option><option value="Jeudi">Jeudi</option><option value="Vendredi">Vendredi</option><option value="Samedi">Samedi</option></select></div>
+                    <div class="form-group"><label for="cours-heure" class="form-label">Heure *</label><input type="time" id="cours-heure" class="form-control" required></div>
+                    <div class="form-group"><label for="cours-duree" class="form-label">Durée (min) *</label><input type="number" id="cours-duree" class="form-control" placeholder="Ex: 60" required></div>
+                    <div class="form-group"><label for="cours-niveau" class="form-label">Niveau *</label><select id="cours-niveau" class="form-control" required><option value="">-- Choisir --</option><option value="Débutant">Débutant</option><option value="Intermédiaire">Intermédiaire</option><option value="Avancé">Avancé</option></select></div>
+                    <div class="form-group"><label for="cours-capacite" class="form-label">Capacité *</label><input type="number" id="cours-capacite" class="form-control" placeholder="Ex: 20" required></div>
+                </div>
+                <div class="d-flex gap-4 mt-4">
+                    <button type="submit" class="btn">Ajouter le Cours</button>
+                    <button type="button" id="btn-annuler-ajout-cours" class="btn btn-outline" style="color:var(--text-muted); border-color:var(--border);">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL POUR MODIFIER UN COURS -->
+    <div id="modal-modifier-cours" class="modal-overlay">
+        <div class="modal-content" style="max-width: 600px;">
+            <button id="fermer-modal-cours" class="btn-close-modal" style="position:absolute; top:15px; right:20px; background:none; border:none; font-size:24px; cursor:pointer; color:var(--text-muted);">&times;</button>
+            <h2 class="mb-4">Modifier le Cours</h2>
+            <form id="form-modifier-cours">
+                <input type="hidden" id="edit-cours-id">
+                <div class="grid grid-2">
+                    <div class="form-group"><label for="edit-cours-nom" class="form-label">Nom du Cours *</label><input type="text" id="edit-cours-nom" class="form-control" required></div>
+                    <div class="form-group"><label for="edit-cours-coach" class="form-label">Coach *</label><select id="edit-cours-coach" class="form-control" required><option value="Sarah Benmoussa">Sarah Benmoussa</option><option value="Karim Hadjadj">Karim Hadjadj</option><option value="Yacine Djellouli">Yacine Djellouli</option><option value="Amira Tebbal">Amira Tebbal</option><option value="Sofiane Bouzid">Sofiane Bouzid</option><option value="Lyna Mansouri">Lyna Mansouri</option></select></div>
+                    <div class="form-group"><label for="edit-cours-jour" class="form-label">Jour *</label><select id="edit-cours-jour" class="form-control" required><option value="Lundi">Lundi</option><option value="Mardi">Mardi</option><option value="Mercredi">Mercredi</option><option value="Jeudi">Jeudi</option><option value="Vendredi">Vendredi</option><option value="Samedi">Samedi</option></select></div>
+                    <div class="form-group"><label for="edit-cours-heure" class="form-label">Heure *</label><input type="time" id="edit-cours-heure" class="form-control" required></div>
+                    <div class="form-group"><label for="edit-cours-duree" class="form-label">Durée (min) *</label><input type="number" id="edit-cours-duree" class="form-control" required></div>
+                    <div class="form-group"><label for="edit-cours-niveau" class="form-label">Niveau *</label><select id="edit-cours-niveau" class="form-control" required><option value="Débutant">Débutant</option><option value="Intermédiaire">Intermédiaire</option><option value="Avancé">Avancé</option></select></div>
+                    <div class="form-group"><label for="edit-cours-capacite" class="form-label">Capacité *</label><input type="number" id="edit-cours-capacite" class="form-control" required></div>
+                </div>
+                <div class="d-flex gap-4 mt-4">
+                    <button type="submit" class="btn">Enregistrer</button>
+                    <button type="button" id="btn-annuler-edit-cours" class="btn btn-outline" style="color:var(--text-muted); border-color:var(--border);">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 PowerFit DZ – Interface d'Administration. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/admin-cours.js"></script>
+
+</body>
+</html>

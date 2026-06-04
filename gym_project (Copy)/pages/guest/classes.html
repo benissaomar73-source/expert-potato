@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit DZ - Cours</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Power<span>Fit</span> DZ</div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="classes.html" class="active">Cours</a>
+                <a href="membership.html">Abonnements</a>
+                <a href="trainers.html">Coachs</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-header">
+            <div class="container">
+                <h1>Nos Cours</h1>
+                <p>Choisissez parmi nos cours collectifs animés par des coachs certifiés</p>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                
+                <!-- ===== ZONE FILTRES ===== -->
+                <div class="card mb-4">
+                    <h3 class="mb-3">🔍 Filtrer les cours</h3>
+                    <div class="grid grid-3">
+
+                        <!-- Filtre Coach -->
+                        <div class="form-group">
+                            <label for="filtre-coach" class="form-label">Coach</label>
+                            <select id="filtre-coach" class="form-control">
+                                <option value="">Tous les coachs</option>
+                                <option value="Sarah Benmoussa">Sarah Benmoussa</option>
+                                <option value="Karim Hadjadj">Karim Hadjadj</option>
+                                <option value="Yacine Djellouli">Yacine Djellouli</option>
+                                <option value="Amira Tebbal">Amira Tebbal</option>
+                                <option value="Sofiane Bouzid">Sofiane Bouzid</option>
+                            </select>
+                        </div>
+
+                        <!-- Filtre Jour -->
+                        <div class="form-group">
+                            <label for="filtre-jour" class="form-label">Jour</label>
+                            <select id="filtre-jour" class="form-control">
+                                <option value="">Tous les jours</option>
+                                <option value="Lundi">Lundi</option>
+                                <option value="Mardi">Mardi</option>
+                                <option value="Mercredi">Mercredi</option>
+                                <option value="Jeudi">Jeudi</option>
+                                <option value="Vendredi">Vendredi</option>
+                                <option value="Samedi">Samedi</option>
+                            </select>
+                        </div>
+
+                        <!-- Filtre Niveau -->
+                        <div class="form-group">
+                            <label for="filtre-niveau" class="form-label">Niveau</label>
+                            <select id="filtre-niveau" class="form-control">
+                                <option value="">Tous niveaux</option>
+                                <option value="Débutant">Débutant</option>
+                                <option value="Intermédiaire">Intermédiaire</option>
+                                <option value="Avancé">Avancé</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ===== TABLEAU DES COURS ===== -->
+                <div class="table-responsive">
+                    <table class="table-lg">
+                        <caption>Liste des cours disponibles au PowerFit DZ</caption>
+                        <thead>
+                            <tr>
+                                <th data-colonne="nom">Nom du Cours</th>
+                                <th data-colonne="coach">Coach</th>
+                                <th data-colonne="jour">Jour</th>
+                                <th data-colonne="heure">Heure</th>
+                                <th data-colonne="duree">Durée</th>
+                                <th data-colonne="niveau">Niveau</th>
+                                <th>Détails</th>
+                            </tr>
+                        </thead>
+                        <tbody id="corps-tableau">
+                            <!-- Rempli dynamiquement par classes.js -->
+                            <tr>
+                                <td colspan="7" class="text-center color-light-gray p-20">
+                                    Chargement des cours...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-2 text-muted font-small">💡 Cliquez sur une colonne pour trier ↑↓</p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-col">
+                    <h4>PowerFit DZ</h4>
+                    <p>Votre partenaire sport à Constantine. Transformez votre corps, changez votre vie avec nos installations premium et nos coachs experts.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="classes.html">Cours</a></li>
+                        <li><a href="membership.html">Abonnements</a></li>
+                        <li><a href="trainers.html">Coachs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact & Horaires</h4>
+                    <ul>
+                        <li>📍 Rue Abane Ramdane, Constantine</li>
+                        <li>📞 033 12 34 56</li>
+                        <li>📧 contact@powerfitdz.com</li>
+                        <li>🕐 Lun–Sam : 7h00 – 22h00</li>
+                        <li>🕐 Dim : 9h00 – 17h00</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Réseaux Sociaux</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PowerFit DZ – Constantine, Algérie. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/classes.js"></script>
+
+</body>
+</html>

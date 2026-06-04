@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit DZ - Contact</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Power<span>Fit</span> DZ</div>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="classes.html">Cours</a>
+                <a href="membership.html">Abonnements</a>
+                <a href="trainers.html">Coachs</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="page-header">
+            <div class="container">
+                <h1>Contactez-Nous</h1>
+                <p>Nous sommes là pour répondre à toutes vos questions</p>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="grid contact-grid">
+
+                    <!-- Formulaire -->
+                    <div class="card">
+                        <h2 class="mb-4">Envoyer un Message</h2>
+
+                        <form id="form-contact" novalidate>
+
+                            <div class="form-group">
+                                <label for="nom" class="form-label">Nom *</label>
+                                <input type="text" id="nom" name="nom" class="form-control" placeholder="Votre nom complet">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="exemple@gmail.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sujet" class="form-label">Sujet *</label>
+                                <input type="text" id="sujet" name="sujet" class="form-control" placeholder="Ex: Renseignements sur les abonnements">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-control" placeholder="Écrivez votre message ici..."></textarea>
+                                <!-- Compteur de caractères mis à jour par contact.js -->
+                                <div class="mt-1 text-right">
+                                    <small id="compteur-message" class="text-muted">0 / 20 caractères minimum</small>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn w-100">
+                                Envoyer le Message
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <!-- Infos contact -->
+                    <div class="d-flex flex-column gap-4">
+                        <div class="info-box">
+                            <h3 class="mb-3">📍 Notre Adresse</h3>
+                            <address>
+                                <p>Rue Abane Ramdane, Quartier Bardo<br>Constantine, 25000, Algérie</p>
+                                <p>📞 <a href="tel:+213331234567">033 12 34 56</a></p>
+                                <p>📱 <a href="tel:+213555123456">0555 12 34 56</a></p>
+                                <p>📧 <a href="mailto:contact@powerfitdz.com">contact@powerfitdz.com</a></p>
+                            </address>
+                        </div>
+
+                        <div class="card">
+                            <h3 class="mb-3">🕐 Horaires d'Ouverture</h3>
+                            <div class="table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Jour</th>
+                                            <th>Horaire</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Lundi – Vendredi</td>
+                                            <td>7h00 – 22h00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Samedi</td>
+                                            <td>8h00 – 20h00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dimanche</td>
+                                            <td>9h00 – 17h00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Carte placeholder -->
+                <div class="mt-4">
+                    <h2 class="section-title">Nous Trouver</h2>
+                    <div style="background-color: #e2e8f0; height: 400px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; border: 2px dashed #cbd5e1;">
+                        <div class="text-center">
+                            <p style="font-size: 3rem; margin-bottom: 1rem;">🗺️</p>
+                            <p class="text-muted">
+                                <strong>Google Maps Placeholder</strong><br>
+                                Rue Abane Ramdane, Constantine, Algérie
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal de Succès (Géré par contact.js) -->
+    <div id="success-modal" class="success-modal">
+        <div class="success-modal-content">
+            <span class="success-icon">✅</span>
+            <h2>Message Envoyé !</h2>
+            <p>Merci de nous avoir contactés. Notre équipe vous répondra dans les plus brefs délais.</p>
+            <button id="btn-close-modal" class="btn">Fermer</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-col">
+                    <h4>PowerFit DZ</h4>
+                    <p>Votre partenaire sport à Constantine. Transformez votre corps, changez votre vie avec nos installations premium et nos coachs experts.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="classes.html">Cours</a></li>
+                        <li><a href="membership.html">Abonnements</a></li>
+                        <li><a href="trainers.html">Coachs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact & Horaires</h4>
+                    <ul>
+                        <li>📍 Rue Abane Ramdane, Constantine</li>
+                        <li>📞 033 12 34 56</li>
+                        <li>📧 contact@powerfitdz.com</li>
+                        <li>🕐 Lun–Sam : 7h00 – 22h00</li>
+                        <li>🕐 Dim : 9h00 – 17h00</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Réseaux Sociaux</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PowerFit DZ – Constantine, Algérie. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/contact.js"></script>
+
+</body>
+</html>

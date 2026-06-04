@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit DZ - Admin Login</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body style="background-color: var(--bg);">
+
+    <!-- ===== EN-TÊTE ET NAVIGATION ===== -->
+    <header>
+        <nav>
+            <div class="logo">Power<span>Fit</span> DZ <span class="badge" style="background:var(--danger); color:white; font-size:0.8rem; margin-left:10px; padding: 4px 8px; vertical-align: middle;">ADMIN</span></div>
+            <div class="nav-links">
+                <a href="../guest/index.html">← Retour au site principal</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height: calc(100vh - 80px); display: flex; align-items: center; justify-content: center;">
+            <div class="login-box card" style="width: 100%; max-width: 450px; background: var(--white); padding: var(--s-6); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); text-align: center;">
+                <div class="login-logo mb-4">
+                    <h1 style="margin-bottom: 0; color: var(--primary); font-size: 2.5rem;">Connexion</h1>
+                    <p class="subtitle" style="margin-top: 5px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">Espace Administrateur</p>
+                </div>
+                <form action="admin-dashboard.html" method="GET">
+                    <div class="form-group" style="text-align: left; margin-bottom: 1.5rem;">
+                        <label for="username" class="form-label" style="display: block; font-family: 'Roboto', sans-serif; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 0.5rem;">Nom d'Utilisateur</label>
+                        <input type="text" id="username" name="username" class="form-control" placeholder="admin" required style="border: 1px solid var(--border); background-color: #f8fafc; padding: 0.75rem 1rem; font-size: 0.95rem; border-radius: 8px; width: 100%; color: var(--primary); font-family: 'Roboto', sans-serif;">
+                    </div>
+                    <div class="form-group" style="text-align: left; margin-bottom: 1.5rem;">
+                        <label for="password" class="form-label" style="display: block; font-family: 'Roboto', sans-serif; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 0.5rem;">Mot de Passe</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required style="border: 1px solid var(--border); background-color: #f8fafc; padding: 0.75rem 1rem; font-size: 0.95rem; border-radius: 8px; width: 100%; color: var(--primary); font-family: 'Roboto', sans-serif;">
+                    </div>
+                    <button type="submit" class="btn w-100" style="margin-top: 1rem; width: 100%; padding: 1rem; font-size: 1.1rem;">Se Connecter</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
